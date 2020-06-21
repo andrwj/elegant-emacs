@@ -1,3 +1,5 @@
+;; (setq gc-cons-threshold most-positive-fixnum)
+
 (require 'evil)
 (evil-mode 1)
 
