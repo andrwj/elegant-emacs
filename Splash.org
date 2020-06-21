@@ -10,7 +10,7 @@
 
                   [[file:data/logo.svg]]
                             [[https://www.gnu.org][ www.gnu.org ]]
-                        *GNU Emacs* version 26.3
+                        *GNU Emacs* version 27.0.91
                          Type[[file:Welcome.org][ Ctrl-h ]]for help
 
 
