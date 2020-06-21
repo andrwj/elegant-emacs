@@ -123,3 +123,7 @@
 
 (require 'magit)
 
+(require 'flycheck)
+(global-flycheck-mode)
+(setq flycheck-javascript-eslint-executable "eslint_d")
+

@@ -18,6 +18,7 @@ exec emacs -q \
    -L "${BASE_DIR}/packages/dash"  \
    -L "${BASE_DIR}/packages/with-editor"  \
    -L "${BASE_DIR}/packages/magit/lisp"  \
+   -L "${BASE_DIR}/packages/flycheck"  \
    -L "${BASE_DIR}/packages/rainbow-delimiters"  \
    -l "${BASE_DIR}/sanity.el" \
    -l "${BASE_DIR}/elegance.el" \
