@@ -127,3 +127,6 @@
 (global-flycheck-mode)
 (setq flycheck-javascript-eslint-executable "eslint_d")
 
+;;(require 'lsp-mode)
+;;(setq lsp-enable-symbol-highlighting t)
+
