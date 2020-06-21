@@ -20,6 +20,8 @@ exec emacs -q \
    -L "${BASE_DIR}/packages/magit/lisp"  \
    -L "${BASE_DIR}/packages/flycheck"  \
    -L "${BASE_DIR}/packages/lsp-mode"  \
+   -L "${BASE_DIR}/packages/treemacs/src/elisp"  \
+   -L "${BASE_DIR}/packages/treemacs/src/extra"  \
    -L "${BASE_DIR}/packages/rainbow-delimiters"  \
    -l "${BASE_DIR}/sanity.el" \
    -l "${BASE_DIR}/elegance.el" \

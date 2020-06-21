@@ -130,3 +130,6 @@
 ;;(require 'lsp-mode)
 ;;(setq lsp-enable-symbol-highlighting t)
 
+
+;; (require 'treemacs)
+

@@ -55,3 +55,6 @@
 [submodule "packages/lsp-mode"]
 	path = packages/lsp-mode
 	url = https://github.com/emacs-lsp/lsp-mode.git
+[submodule "packages/treemacs"]
+	path = packages/treemacs
+	url = https://github.com/Alexander-Miller/treemacs.git
