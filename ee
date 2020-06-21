@@ -1,5 +1,5 @@
 #!/bin/bash
-BASE_DIR=${HOME}/Develops/Emacs/packages/elegant-emacs
+BASE_DIR=${HOME}/Develops/fEmacs
 exec emacs -q \
    -L "${BASE_DIR}" \
    -L "${BASE_DIR}/packages/evil" \
