@@ -31,3 +31,9 @@
 [submodule "packages/transient"]
 	path = packages/transient
 	url = https://github.com/magit/transient.git
+[submodule "packages/js2-mode"]
+	path = packages/js2-mode
+	url = https://github.com/mooz/js2-mode.git
+[submodule "packages/rainbow-delimiters"]
+	path = packages/rainbow-delimiters
+	url = https://github.com/Fanael/rainbow-delimiters.git

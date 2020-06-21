@@ -13,5 +13,10 @@ exec emacs -q \
    -L "${BASE_DIR}/packages/wgrep"  \
    -L "${BASE_DIR}/packages/s"  \
    -L "${BASE_DIR}/packages/rg"  \
-   -l sanity.el -l elegance.el -l init.el \
+   -L "${BASE_DIR}/packages/js2-mode"  \
+   -L "${BASE_DIR}/packages/rainbow-delimiters"  \
+   -l "${BASE_DIR}/sanity.el" \
+   -l "${BASE_DIR}/elegance.el" \
+   -l "${BASE_DIR}/init.el" \
+   -l "${BASE_DIR}/colorize-identifiers.el" \
    "$@"

@@ -90,3 +90,12 @@
 (rg-enable-menu)
 
 
+(require 'js2-mode)
+(custom-set-faces
+  '(js2-object-property ((t (:inherit font-lock-variable-name-face)))))
+(add-to-list 'auto-mode-alist '("\\.mjs\\'" . js2-mode))
+
+
+(require 'rainbow-delimiters)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
