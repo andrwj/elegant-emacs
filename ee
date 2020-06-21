@@ -5,5 +5,13 @@ exec emacs -q \
    -L "${BASE_DIR}/packages/evil" \
    -L "${BASE_DIR}/packages/which-key"  \
    -L "${BASE_DIR}/packages/aggressive-indent-mode"  \
+   -L "${BASE_DIR}/packages/powerline"  \
+   -L "${BASE_DIR}/packages/centaur-tabs"  \
+   -L "${BASE_DIR}/packages/ranger"  \
+   -L "${BASE_DIR}/packages/fzf"  \
+   -L "${BASE_DIR}/packages/transient/lisp"  \
+   -L "${BASE_DIR}/packages/wgrep"  \
+   -L "${BASE_DIR}/packages/s"  \
+   -L "${BASE_DIR}/packages/rg"  \
    -l sanity.el -l elegance.el -l init.el \
    "$@"

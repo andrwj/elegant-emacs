@@ -7,3 +7,27 @@
 [submodule "packages/aggressive-indent-mode"]
 	path = packages/aggressive-indent-mode
 	url = https://github.com/Malabarba/aggressive-indent-mode.git
+[submodule "packages/centaur-tabs"]
+	path = packages/centaur-tabs
+	url = https://github.com/ema2159/centaur-tabs
+[submodule "packages/powerline"]
+	path = packages/powerline
+	url = https://github.com/milkypostman/powerline.git
+[submodule "packages/ranger"]
+	path = packages/ranger
+	url = https://github.com/ralesi/ranger.el.git
+[submodule "packages/fzf"]
+	path = packages/fzf
+	url = git@github.com:andrwj/fzf.el.git
+[submodule "packages/rg"]
+	path = packages/rg
+	url = https://github.com/dajva/rg.el.git
+[submodule "packages/s"]
+	path = packages/s
+	url = https://github.com/magnars/s.el.git
+[submodule "packages/wgrep"]
+	path = packages/wgrep
+	url = https://github.com/mhayashi1120/Emacs-wgrep.git
+[submodule "packages/transient"]
+	path = packages/transient
+	url = https://github.com/magit/transient.git

@@ -1,12 +1,34 @@
 (require 'evil)
 (evil-mode 1)
 
+    ;; 커서 색상
+    (if (display-graphic-p)
+        (setq evil-default-cursor (quote (t "#750000"))
+            evil-visual-state-cursor '("#880000" box)
+            evil-normal-state-cursor '("#750000" box)
+            evil-insert-state-cursor '("#e2e222" bar)
+            ))
+
+    ;; In normal state
+    (define-key evil-normal-state-map (kbd "C-c <up>") 'evil-window-up)
+    (define-key evil-normal-state-map (kbd "C-c <down>") 'evil-window-down)
+    (define-key evil-normal-state-map (kbd "C-c <left>") 'evil-window-left)
+    (define-key evil-normal-state-map (kbd "C-c <right>") 'evil-window-right)
+
+    ;; In terminal
+    (evil-define-key 'insert term-raw-map (kbd "C-c <up>") 'evil-window-up)
+    (evil-define-key 'insert term-raw-map (kbd "C-c <right>") 'evil-window-right)
+    (evil-define-key 'insert term-raw-map (kbd "C-c <left>") 'evil-window-left)
+
+
+;; 메뉴
 (require 'which-key)
 (setq which-key-show-early-on-C-h t) ;; Allow C-h to trigger which-key before it is done automatically
 (setq which-key-idle-delay 0.3) ;; make sure which-key doesn't show normally but refreshes quickly after it is triggered.
 (setq which-key-idle-secondary-delay 0.2)
 (which-key-mode)
 
+;; 어그레시브 인덴트!!
 (require 'aggressive-indent)
 (add-to-list
  'aggressive-indent-dont-indent-if
@@ -15,7 +37,7 @@
                            (thing-at-point 'line)))))
 (aggressive-indent-mode 1)
 
-
+;; 들여쓰기 공백 3칸
 (defun andrwj/setup-indent-env (n)
   (interactive)
   (setq-default c-basic-offset n) ; java/c/c++
@@ -32,4 +54,39 @@
 (andrwj/setup-indent-env 3)
 
 ;; 라인번호 표시
-(setq display-line-numbers-type t)
+(global-display-line-numbers-mode)
+
+;; ranger
+(require 'ranger)
+(ranger-override-dired-mode t)
+(setq ranger-show-hidden t) ;;show dot files
+(setq ranger-dont-show-binary t) ;; don't show binary
+(setq helm-descbinds-window-style 'same-window) ;; helm-descbinds 패키지와 같이 씀에 따라 생기는 문제 해결
+(setq ranger-hide-cursor nil)
+(setq ranger-width-parents 0.2)
+(setq ranger-width-preview 0.55)
+(setq ranger-excluded-extensions '("mkv" "iso" "mp4" "DS_Store" "zip" "tgz" "tar" "gz"))
+
+;; 한국어 입력 설정 & 파일 인코딩
+(set-language-environment "Korean")
+(prefer-coding-system 'utf-8)
+
+;; Make whitespace-mode with very basic background coloring for whitespaces.
+;; http://ergoemacs.org/emacs/whitespace-mode.html
+;; (global-whitespace-mode)
+(setq whitespace-style (quote (face spaces tabs newline space-mark tab-mark newline-mark )))
+;; Make whitespace-mode and whitespace-newline-mode use “¶” for end of line char and “▷” for tab.
+(setq whitespace-display-mappings
+    ;; all numbers are unicode codepoint in decimal. e.g. (insert-char 182 1)
+    '((space-mark 32 [183] [46]) ; SPACE 32 「 」, 183 MIDDLE DOT 「·」, 46 FULL STOP 「.」
+      (newline-mark 10 [182 10]) ; LINE FEED,
+      (tab-mark 9 [9655 9] [92 9]))) ; tab
+
+
+(require 'fzf)
+
+(require 'rg)
+;; (rg-enable-default-bindings)
+(rg-enable-menu)
+
+
