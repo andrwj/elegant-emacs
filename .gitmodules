@@ -37,3 +37,15 @@
 [submodule "packages/rainbow-delimiters"]
 	path = packages/rainbow-delimiters
 	url = https://github.com/Fanael/rainbow-delimiters.git
+[submodule "packages/general"]
+	path = packages/general
+	url = https://github.com/noctuid/general.el.git
+[submodule "packages/magit"]
+	path = packages/magit
+	url = https://github.com/magit/magit.git
+[submodule "packages/dash"]
+	path = packages/dash
+	url = https://github.com/magnars/dash.el.git
+[submodule "packages/with-editor"]
+	path = packages/with-editor
+	url = https://github.com/magit/with-editor.git

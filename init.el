@@ -1,32 +1,52 @@
 (require 'evil)
 (evil-mode 1)
 
-    ;; 커서 색상
-    (if (display-graphic-p)
-        (setq evil-default-cursor (quote (t "#750000"))
-            evil-visual-state-cursor '("#880000" box)
-            evil-normal-state-cursor '("#750000" box)
-            evil-insert-state-cursor '("#e2e222" bar)
-            ))
-
-    ;; In normal state
-    (define-key evil-normal-state-map (kbd "C-c <up>") 'evil-window-up)
-    (define-key evil-normal-state-map (kbd "C-c <down>") 'evil-window-down)
-    (define-key evil-normal-state-map (kbd "C-c <left>") 'evil-window-left)
-    (define-key evil-normal-state-map (kbd "C-c <right>") 'evil-window-right)
-
-    ;; In terminal
-    (evil-define-key 'insert term-raw-map (kbd "C-c <up>") 'evil-window-up)
-    (evil-define-key 'insert term-raw-map (kbd "C-c <right>") 'evil-window-right)
-    (evil-define-key 'insert term-raw-map (kbd "C-c <left>") 'evil-window-left)
+   ;; 커서 색상
+   (if (display-graphic-p)
+      (setq evil-default-cursor (quote (t "#750000"))
+         evil-visual-state-cursor '("#880000" box)
+         evil-normal-state-cursor '("#750000" box)
+         evil-insert-state-cursor '("#e2e222" bar)))
 
 
-;; 메뉴
+   ;; In normal state
+   (define-key evil-normal-state-map (kbd "C-c <up>") 'evil-window-up)
+   (define-key evil-normal-state-map (kbd "C-c <down>") 'evil-window-down)
+   (define-key evil-normal-state-map (kbd "C-c <left>") 'evil-window-left)
+   (define-key evil-normal-state-map (kbd "C-c <right>") 'evil-window-right)
+
+   ;; In terminal
+   (evil-define-key 'insert term-raw-map (kbd "C-c <up>") 'evil-window-up)
+   (evil-define-key 'insert term-raw-map (kbd "C-c <right>") 'evil-window-right)
+   (evil-define-key 'insert term-raw-map (kbd "C-c <left>") 'evil-window-left)
+
+
+;; Which-Key 메뉴
 (require 'which-key)
-(setq which-key-show-early-on-C-h t) ;; Allow C-h to trigger which-key before it is done automatically
-(setq which-key-idle-delay 0.3) ;; make sure which-key doesn't show normally but refreshes quickly after it is triggered.
-(setq which-key-idle-secondary-delay 0.2)
-(which-key-mode)
+   (setq which-key-show-early-on-C-h t) ;; Allow C-h to trigger which-key before it is done automatically
+   (setq which-key-idle-delay 0.3) ;; make sure which-key doesn't show normally but refreshes quickly after it is triggered.
+   (setq which-key-idle-secondary-delay 0.2)
+   (setq which-key-sort-order #'which-key-prefix-then-key-order
+         which-key-sort-uppercase-first t
+         which-key-add-column-padding 1
+         which-key-max-display-columns nil)
+
+   (set-face-attribute 'which-key-local-map-description-face nil :weight 'bold)
+   (which-key-setup-side-window-bottom)
+   ; (setq-hook! 'which-key-init-buffer-hook line-spacing 3)
+   ; (which-key-add-key-based-replacements "SPC" "<leader>")
+   ; (which-key-add-key-based-replacements "SPC m" "<localleader>")
+   (which-key-mode)
+
+(require 'general)
+
+;; (general-define-key
+;;    :states '(normal motion insert emacs)
+;;    :prefix "SPC"
+;;    "ar" '(ranger :which-key "call ranger")
+;;    "g"  '(:ignore t :which-key "Git")
+;;    "gs" '(magit-status :which-key "git status"))
+
 
 ;; 어그레시브 인덴트!!
 (require 'aggressive-indent)
@@ -98,4 +118,6 @@
 
 (require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
+(require 'magit)
 

@@ -4,6 +4,7 @@ exec emacs -q \
    -L "${BASE_DIR}" \
    -L "${BASE_DIR}/packages/evil" \
    -L "${BASE_DIR}/packages/which-key"  \
+   -L "${BASE_DIR}/packages/general"  \
    -L "${BASE_DIR}/packages/aggressive-indent-mode"  \
    -L "${BASE_DIR}/packages/powerline"  \
    -L "${BASE_DIR}/packages/centaur-tabs"  \
@@ -14,6 +15,9 @@ exec emacs -q \
    -L "${BASE_DIR}/packages/s"  \
    -L "${BASE_DIR}/packages/rg"  \
    -L "${BASE_DIR}/packages/js2-mode"  \
+   -L "${BASE_DIR}/packages/dash"  \
+   -L "${BASE_DIR}/packages/with-editor"  \
+   -L "${BASE_DIR}/packages/magit/lisp"  \
    -L "${BASE_DIR}/packages/rainbow-delimiters"  \
    -l "${BASE_DIR}/sanity.el" \
    -l "${BASE_DIR}/elegance.el" \
