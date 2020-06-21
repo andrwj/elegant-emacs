@@ -1,3 +1,9 @@
-[submodule "evil"]
+[submodule "packages/evil"]
 	path = evil
 	url = https://github.com/emacs-evil/evil.git
+[submodule "packages/which-key"]
+	path = packages/which-key
+	url = https://github.com/justbur/emacs-which-key
+[submodule "packages/aggressive-indent-mode"]
+	path = packages/aggressive-indent-mode
+	url = https://github.com/Malabarba/aggressive-indent-mode.git
