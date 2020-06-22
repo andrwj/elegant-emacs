@@ -121,6 +121,10 @@
   '(js2-object-property ((t (:inherit font-lock-variable-name-face)))))
 (add-to-list 'auto-mode-alist '("\\.mjs\\'" . js2-mode))
 
+;; js2-mode의 문법검사 기능을 끄고 싶다면...
+(setq js2-mode-show-parse-errors nil
+      js2-mode-show-strict-warnings nil)
+
 
 (require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
@@ -128,8 +132,9 @@
 (require 'magit)
 
 (require 'flycheck)
-(global-flycheck-mode)
+;; (global-flycheck-mode)
 (setq flycheck-javascript-eslint-executable "eslint_d")
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;;(require 'lsp-mode)
 ;;(setq lsp-enable-symbol-highlighting t)

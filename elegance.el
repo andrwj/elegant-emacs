@@ -33,17 +33,17 @@
 
 
 ;; Font and frame size
-(set-face-font 'default "Noto Sans Mono CJK KR 16")
+(set-face-font 'default "Roboto Mono Light 14")
 (setq default-frame-alist
-      (append (list '(width  . 137) '(height . 50)
+      (append (list '(width  . 72) '(height . 40)
                     '(vertical-scroll-bars . nil)
                     '(internal-border-width . 24)
-                    '(font . "Noto Sans Mono CJK KR 16"))))
+                    '(font . "Roboto Mono Light 14"))))
 (set-frame-parameter (selected-frame)
                      'internal-border-width 24)
 
 ;; Line spacing, can be 0 for code and 1 or 2 for text
-(setq-default line-spacing 1)
+(setq-default line-spacing 0)
 
 ;; Underline line at descent position, not baseline position
 (setq x-underline-at-descent-line t)
