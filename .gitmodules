@@ -67,3 +67,6 @@
 [submodule "packages/iedit"]
 	path = packages/iedit
 	url = https://github.com/victorhge/iedit.git
+[submodule "packages/highlight-symbol"]
+	path = packages/highlight-symbol
+	url = https://github.com/nschum/highlight-symbol.el.git

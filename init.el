@@ -132,9 +132,8 @@
 (require 'magit)
 
 (require 'flycheck)
-;; (global-flycheck-mode)
 (setq flycheck-javascript-eslint-executable "eslint_d")
-(add-hook 'after-init-hook #'global-flycheck-mode)
+(global-flycheck-mode)
 
 ;;(require 'lsp-mode)
 ;;(setq lsp-enable-symbol-highlighting t)
@@ -147,4 +146,10 @@
 
 
 (require 'evil-multiedit)
+
+;; 커서 위치의 심볼 강조
+(require 'highlight-symbol)
+(add-hook 'prog-mode-hook (lambda () (highlight-symbol-mode)))
+(setq highlight-symbol-on-navigation-p t)
+(setq highlight-symbol-idle-delay 0.5)
 

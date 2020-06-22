@@ -26,6 +26,7 @@ exec emacs -q \
    -L "${BASE_DIR}/packages/treemacs/src/extra"  \
    -L "${BASE_DIR}/packages/rainbow-delimiters"  \
    -L "${BASE_DIR}/packages/vimrc-mode"  \
+   -L "${BASE_DIR}/packages/highlight-symbol"  \
    -l "${BASE_DIR}/sanity.el" \
    -l "${BASE_DIR}/elegance.el" \
    -l "${BASE_DIR}/init.el" \
