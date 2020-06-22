@@ -3,6 +3,8 @@ BASE_DIR=${HOME}/Develops/fEmacs
 exec emacs -q \
    -L "${BASE_DIR}" \
    -L "${BASE_DIR}/packages/evil" \
+   -L "${BASE_DIR}/packages/iedit" \
+   -L "${BASE_DIR}/packages/evil-multiedit" \
    -L "${BASE_DIR}/packages/which-key"  \
    -L "${BASE_DIR}/packages/general"  \
    -L "${BASE_DIR}/packages/aggressive-indent-mode"  \
@@ -23,6 +25,7 @@ exec emacs -q \
    -L "${BASE_DIR}/packages/treemacs/src/elisp"  \
    -L "${BASE_DIR}/packages/treemacs/src/extra"  \
    -L "${BASE_DIR}/packages/rainbow-delimiters"  \
+   -L "${BASE_DIR}/packages/vimrc-mode"  \
    -l "${BASE_DIR}/sanity.el" \
    -l "${BASE_DIR}/elegance.el" \
    -l "${BASE_DIR}/init.el" \

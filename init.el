@@ -1,5 +1,9 @@
 ;; (setq gc-cons-threshold most-positive-fixnum)
 
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("melpa" . "http://melpa.org/packages/")
+                         ("org" . "http://orgmode.org/elpa/")))
+
 (require 'evil)
 (evil-mode 1)
 
@@ -132,4 +136,10 @@
 
 
 ;; (require 'treemacs)
+
+(require 'vimrc-mode)
+(add-to-list 'auto-mode-alist '("\\.vim\\(rc\\)?\\'" . vimrc-mode))
+
+
+(require 'evil-multiedit)
 

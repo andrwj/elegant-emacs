@@ -58,3 +58,12 @@
 [submodule "packages/treemacs"]
 	path = packages/treemacs
 	url = https://github.com/Alexander-Miller/treemacs.git
+[submodule "packages/vimrc-mode"]
+	path = packages/vimrc-mode
+	url = https://github.com/mcandre/vimrc-mode.git
+[submodule "packages/evil-multiedit"]
+	path = packages/evil-multiedit
+	url = https://github.com/hlissner/evil-multiedit.git
+[submodule "packages/iedit"]
+	path = packages/iedit
+	url = https://github.com/victorhge/iedit.git
